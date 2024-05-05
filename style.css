@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url(bg.png) center/cover no-repeat fixed;
+  overflow: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding: 0 6rem;
+}
+.navbar ul a {
+  text-decoration: none;
+  color: white;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+.navbar ul li {
+  margin-right: 3rem;
+}
+.logo i {
+  font-size: 55px;
+  color: red;
+  animation: rota 2s linear infinite forwards;
+}
+.social-links i {
+  margin-right: 3rem;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+main h1 {
+  color: white;
+  font-size: 55px;
+}
+main .left {
+  color: white;
+  width: 440px;
+  padding-left: 4rem;
+}
+main .right {
+  color: white;
+  padding-right: 4rem;
+}
+main {
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main p {
+  font-size: 15px;
+}
+main h5,
+h4 {
+  font-size: 30px;
+  color: red;
+}
+main .left button {
+  margin-top: 20px;
+  min-width: 160px;
+  max-width: 300px;
+  height: 47px;
+  font-size: 16px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+main span {
+  color: red;
+}
+
+/* Animations right */
+@keyframes rota {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.right p {
+  animation: uptod 2s;
+}
+.right h1 {
+  animation: ritol 2s;
+}
+@keyframes uptod {
+  from {
+    transform: translateX(200px);
+  }
+}
+@keyframes ritol {
+  from {
+    transform: translateY(-600px);
+  }
+}
+/* Animation left */
+
+.left h5,
+h4 {
+  animation: ltor 2s;
+}
+.left h1,
+p {
+  animation: uptod2 2s;
+}
+@keyframes uptod2 {
+  from {
+    transform: translateY(-600px);
+  }
+}
+@keyframes ltor {
+  from {
+    transform: translateX(-300px);
+  }
+}
+.left button {
+  animation: bi 2s;
+}
+@keyframes bi {
+  from {
+    scale: 0;
+  }
+}
+/* Hovers */
+
+.social-links i:hover {
+  color: red;
+  transition: all 1s;
+}
+.navbar ul a:hover {
+  color: red;
+  transition: all 1s;
+}
+.left button:hover {
+  background-color: rgb(180, 0, 0);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+/* Resp. */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 6rem;
+  }
+  main .right {
+    margin-left: 4rem;
+  }
+}
